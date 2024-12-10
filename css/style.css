@@ -14,7 +14,7 @@
 :root {
     --bg-color: #fdfdfd;
     --text-color: #333;
-    --main-color: #754ef9;
+    --main-color: #7e59fa;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
 }
@@ -34,10 +34,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 7%;
-    background:yellowgreen;
+    padding: 1.3rem 2%;
+    background: transparent;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 100;
     box-shadow: var(--shadow-color); 
@@ -45,14 +44,15 @@ body {
 
 .logo {
     font-size: 2.5rem;
-    color: var(--white-color);
+    color: var(--main-color);
     font-weight: 600;
     cursor: default;
+    margin-right: auto;
 }
 
 .logo span {
     font-size: 3rem;
-    color: green;
+    color: rgb(230, 93, 177);
     font-weight: 600;
 }
 
@@ -62,7 +62,6 @@ body {
     color: var(--white-color);
     font-weight: 500;
     margin-right: 3rem;
-    transition: 1s;
 }
 
 .navbar a.active::before {
@@ -79,4 +78,154 @@ body {
     font-size: 2.4rem;
     color: var(--white-color);
     cursor: pointer;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 7% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+}
+
+.home .home-content {
+    max-width: 44rem;
+}
+
+
+.home-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1rem 1rem 1rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 1.6rem;
+    color: var(--white-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    border: .2rem solid transparent;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color); ;
+}
+
+.home .profession-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 768px;
+    height: 768px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.home .profession-container .profession-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 768px;
+    height: 768px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .profession-box .profession {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    color: var(--main-color);
+    transform: rotate(calc(360deg / 3* var(--i)));
+    transform-origin: 384px;
+    background: var(--bg-color);
+    padding: 20px 0;
+}
+
+.home .profession-box .profession:nth-child(1) i {
+    margin-right: 15px;
+    color: rgb(230, 93, 177);
+}
+
+.home .profession-box .profession:nth-child(2),
+.home .profession-box .profession:nth-child(3) {
+    padding-bottom: 20px;
+}
+
+.home .profession i {
+    font-size: 3.8rem; 
+    margin-left: 5px;
+}
+
+.home .profession h3 {
+    font-size: 3.2rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.home .profession-box .circle {
+    width: 560px;
+    height: 560px;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.home .profession-container .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 384px solid var(--main-color);
+    border-right: 384px solid var(--main-color);
+    border-bottom: 384px solid var(--main-color);
+    border-left: 384px solid transparent;
+}
+
+.home-img img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    pointer-events: none;
 }
