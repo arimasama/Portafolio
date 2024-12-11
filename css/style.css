@@ -34,13 +34,36 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.3rem 2%;
+    padding: 1rem 4%;
     background: transparent;
     display: flex;
     align-items: center;
     z-index: 100;
-    box-shadow: var(--shadow-color); 
+    transition: 0.5s;
 }
+
+.header.sticky {
+    background: var(--bg-color);
+    box-shadow: 0.1rem .1rem var(--shadow-color);
+    padding: .4rem 3%;
+}
+
+.header.sticky .navbar a {
+    color: var(--text-color);
+}
+
+.header.sticky .navbar a.active {
+    color: var(--main-color);
+}
+
+.header.sticky .navbar a::before {
+    background: var(--main-color);
+    opacity: .7;
+}
+
+.header.sticky #darkMode-icon {
+    color: var(--text-color);
+}   
 
 .logo {
     font-size: 2.5rem;
@@ -75,14 +98,14 @@ body {
 }
 
 #darkMode-icon {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     color: var(--white-color);
     cursor: pointer;
 }
 
 section {
     min-height: 100vh;
-    padding: 10rem 7% 2rem;
+    padding: 3rem 7% 2rem;
 }
 
 .home {
@@ -98,6 +121,7 @@ section {
 .home-content h1 {
     font-size: 4rem;
     font-weight: 700;
+    line-height: 4rem;
 
 }
 
@@ -117,7 +141,7 @@ section {
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 2rem;
     color: var(--main-color);
-    margin: 1rem 1rem 1rem 0;
+    margin: 1rem 1rem 1.2rem 0;
     transition: .5s ease;
 }
 
@@ -152,7 +176,7 @@ section {
     right: 0;
     transform: translateY(-50%);
     width: 768px;
-    height: 768px;
+    height: 100vh;
     overflow: hidden;
     pointer-events: none;
 }
@@ -198,14 +222,14 @@ section {
 }
 
 .home .profession h3 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     line-height: 1;
     font-weight: 600;
 }
 
 .home .profession-box .circle {
     width: 560px;
-    height: 560px;
+    height: 550px;
     border: 3px solid var(--main-color);
     border-radius: 50%;
 }
@@ -225,7 +249,42 @@ section {
 .home-img img {
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 30%;
+    right: 2%;
+    width: 28%;
     pointer-events: none;
 }
+
+.about span {
+    color: var(--main-color);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img img {
+    width: 35vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 2rem;
+}
+
