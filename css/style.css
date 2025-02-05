@@ -106,7 +106,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 7% 2rem; 
+    padding: 7rem 7% 2rem; 
 }
 
 .home {
@@ -169,6 +169,7 @@ section {
     background: transparent;
     color: var(--main-color);
     border-color: var(--main-color); ;
+    cursor: pointer;
 }
 
 .home .profession-container {
@@ -260,6 +261,7 @@ span {
 }
 
 .about {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,11 +350,12 @@ span {
 }
 
 .portfolio {
+    min-height: auto;
     padding-bottom: 10rem;
 }
 
 .portfolio h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .portfolio .portfolio-container {
@@ -430,7 +433,7 @@ span {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 5rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .testimonial-container .testimonial-wrapper {
@@ -499,4 +502,38 @@ span {
 
 .testimonial-box .swiper-pagination-bullet-active {
     background-color: var(--main-color);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);    
+    border-radius: .8rem;
+    margin: .7rem 0;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+    margin-bottom: 2rem;
 }
