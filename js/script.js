@@ -83,5 +83,5 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading, .about-content h3, .about-content p ', { origin: 'top' });
-ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal(' .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.about-img img', { origin: 'left' });
