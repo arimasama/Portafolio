@@ -75,13 +75,27 @@ darkModeIcon.onclick = () => {
 
 /*========== scroll reveal ==========*/
 
-ScrollReveal({
-    reset: true,
-    distance: '70px',
-    duration: 1500,
-    delay: 50
-});
+let lastScrollTop = 0;
 
-ScrollReveal().reveal('.home-content, .heading, .about-content h3, .about-content p ', { origin: 'top' });
-ScrollReveal().reveal(' .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.about-img img', { origin: 'left' });
+window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Solo activa ScrollReveal si el usuario baja
+        ScrollReveal({
+            distance: "70px",
+            duration: 1500,
+            delay: 50,
+            once: true // Hace que la animación ocurra solo una vez
+        });
+
+        ScrollReveal().reveal('.home-content, .heading, .about-content h3, .about-content p', { origin: 'top' });
+        ScrollReveal().reveal('.services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+        ScrollReveal().reveal('.about-img img', { origin: 'left' });
+
+        // Removemos el event listener después de activar ScrollReveal para evitar ejecuciones innecesarias
+        window.removeEventListener("scroll", arguments.callee);
+    }
+
+    lastScrollTop = scrollTop;
+});
