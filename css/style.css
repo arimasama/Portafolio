@@ -286,12 +286,12 @@ section {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 40vw;
+    width: 38vw;
     pointer-events: none;
 }
 
 .home-img-code {
-    width: 85%;
+    width: 100%;
     display: flex;
     justify-content: start;
     margin-top: 2rem;
