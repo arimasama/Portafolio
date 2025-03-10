@@ -558,6 +558,18 @@ span {
     background-color: var(--main-color);
 }
 
+.contact i {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+.contact p {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
 .contact form {
     max-width: 70rem;
     margin: 0.5rem auto;
@@ -590,6 +602,21 @@ span {
 .contact form textarea {
     resize: none;
     margin-bottom: 2rem;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.contactInfo .box i {
+    font-size: 2.4rem;
+    padding: .5rem; 
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
 }
 
 .footer {
