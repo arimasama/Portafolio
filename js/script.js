@@ -66,18 +66,29 @@ let swiper = new Swiper(".mySwiper", {
 
 
 /*========== dark light mode ==========*/
-let darkModeIcon = document.querySelector('#darkMode-icon');
+let lightModeIcon = document.querySelector('#lightMode-icon');
 
-darkModeIcon.onclick = () => {
-    darkModeIcon.classList.toggle('bx-sun')
-    document.body.classList.toggle('dark-mode');
+lightModeIcon.onclick = () => {
+    lightModeIcon.classList.toggle('bx-moon');
+    lightModeIcon.classList.toggle('bx-sun');
+    document.body.classList.toggle('light-mode');
 }
 
 /*========== scroll reveal ==========*/
 
+// Animar .home-content solo al cargar la página
+document.addEventListener("DOMContentLoaded", function () {
+    ScrollReveal({
+        distance: "70px",
+        duration: 1500,
+        delay: 50,
+        once: true // Hace que la animación ocurra solo una vez
+    }).reveal('.home-content', { origin: 'top' });
+});
+
 let lastScrollTop = 0;
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function onScroll() {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
@@ -89,12 +100,12 @@ window.addEventListener("scroll", function () {
             once: true // Hace que la animación ocurra solo una vez
         });
 
-        ScrollReveal().reveal('.home-content, .heading, .about-content h3, .about-content p', { origin: 'top' });
+        ScrollReveal().reveal('.heading, .about-content h3, .about-content p', { origin: 'top' });
         ScrollReveal().reveal('.services-container, .portfolio-box, .contact form', { origin: 'bottom' });
         ScrollReveal().reveal('.about-img img', { origin: 'left' });
 
         // Removemos el event listener después de activar ScrollReveal para evitar ejecuciones innecesarias
-        window.removeEventListener("scroll", arguments.callee);
+        window.removeEventListener("scroll", onScroll);
     }
 
     lastScrollTop = scrollTop;

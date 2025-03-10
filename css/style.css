@@ -12,19 +12,20 @@
 }
 
 :root {
+    --bg-color: #1f242d;
+    --text-color: #fff;
+    --shadow-color: rgba(0, 0, 0, .7);
+    --main-color: #4f56a7;
+    --icon-color:   #f5e7e7f3;
+    --pink-color: rgb(230, 93, 177);  
+}
+
+.light-mode {
     --bg-color: #fdfdfd;
     --text-color: #333;
     --main-color: #7e59fa;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
-    --pink-color: rgb(230, 93, 177);
-}
-
-.dark-mode {
-    --bg-color: #1f242d;
-    --text-color: #fff;
-    --shadow-color: rgba(0, 0, 0, .7);
-    --main-color: #4f56a7;
 }
 
 html {
@@ -115,7 +116,7 @@ body {
     background: var(--white-color);
 }
 
-#darkMode-icon {
+#lightMode-icon {
     font-size: 2.2rem;
     color: var(--white-color);
     cursor: pointer;
@@ -776,8 +777,8 @@ span {
         display: flex;
         justify-content: center;
         object-fit: cover;
-        width: 15rem;
-        height: 15rem;
+        width: 20rem;
+        height: 20rem;
         border-radius: 50%;
         border: .3rem solid var(--bg-color);
         outline: .4rem solid var(--main-color);
@@ -828,7 +829,7 @@ span {
         color: var(--main-color);
     }
 
-    #darkMode-icon {
+    #lightMode-icon {
         position: absolute;
         right: 7rem;
         font-size: 2.5rem;
@@ -881,9 +882,19 @@ span {
         font-size: 4rem;
     }
 
+    .home-content p {
+        font-size: 2rem;
+    }
+
     .home-content .social-media a {
         margin: 2.5rem .75rem 3rem;
+        background-color: var(--icon-color);
     }
+
+    .home-content .social-media a:hover {
+        background-color: var(--main-color);
+    }
+
 
     .home .profession-container {
         left: 0;
@@ -940,7 +951,7 @@ span {
         font-size: 50%; 
     }
 
-    #darkMode-icon {
+    #lightMode-icon {
         right: 6rem;
     }
 
