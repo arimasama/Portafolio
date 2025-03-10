@@ -1,0 +1,101 @@
+[33mcommit fdf59ad5510974ce0e1baaeb7eff8257edb1d0f6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Arimasama <ville2007@hotmail.com>
+Date:   Mon Mar 10 00:01:41 2025 -0500
+
+    add profile photo
+
+[33mcommit c130da4a57d3c04cf60ef7ba26e8b6f949c50b1f[m
+Author: Arimasama <ville2007@hotmail.com>
+Date:   Sun Mar 9 23:35:16 2025 -0500
+
+    add contact form
+
+[33mcommit 4de19cb0ba37a6f7a416973f7fcf754f52b06872[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Sun Mar 2 12:19:32 2025 -0500
+
+    add icons
+
+[33mcommit 531f575adebe71a4cd0fd150da41e7a3d2386c3f[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Sun Mar 2 11:33:06 2025 -0500
+
+    aobut me en send 2
+
+[33mcommit f4c79c1fab1ce0bc792d66ef1960611e335ba033[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Sun Mar 2 11:25:06 2025 -0500
+
+    aobut me en send
+
+[33mcommit 1db83e6fe79bf87408c648447d64b21d3981b432[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Sat Mar 1 23:48:54 2025 -0500
+
+    add project 1
+
+[33mcommit bb8c936bd13b18c9fb077701b9e9339ca5e37ae0[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Sat Feb 15 01:46:05 2025 -0500
+
+    corrections
+
+[33mcommit b18e1128547d3eb753133c1d296ba53fddd90464[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Sat Feb 15 00:42:06 2025 -0500
+
+    Responsive and darkmode
+
+[33mcommit 8444504cdcd9c9461e3f9c1a96c020bc75d27c47[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Wed Feb 5 20:57:34 2025 -0500
+
+    restructuracion
+
+[33mcommit 284a895ccfa48a005806407eec20a5c05702cec2[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Wed Feb 5 20:53:10 2025 -0500
+
+    create footer
+
+[33mcommit d0a7225222855f72c5291e6d7e630530959dc117[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Wed Feb 5 18:47:11 2025 -0500
+
+    Contact Section
+
+[33mcommit fa571fb9d643570a5374134209c89a8d81880c84[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Sun Dec 15 10:44:28 2024 -0500
+
+    testimonials create
+
+[33mcommit 58850942349ae4a07090fdee1c3ba6a47ea9f4ac[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Wed Dec 11 23:54:00 2024 -0500
+
+    create services and projects
+
+[33mcommit f8c45a5da18c15df6dbca65d1136fb0b2f616917[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Wed Dec 11 00:21:24 2024 -0500
+
+    create about me
+
+[33mcommit d3e325efa46acb6b2ec6ab6e3e5f18d9ee6b567d[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Tue Dec 10 00:13:41 2024 -0500
+
+    section home
+
+[33mcommit ab141ef69dc1f923ab56ab206bbc0ade51be45da[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Mon Dec 9 20:45:52 2024 -0500
+
+    navbar initial create
+
+[33mcommit 549daf02122c6000b9c7418acb5c395591b4f90d[m
+Author: Camilo Villegas <ville2007@hotmail.com>
+Date:   Mon Dec 9 19:25:27 2024 -0500
+
+    Initial files

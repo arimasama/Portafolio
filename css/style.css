@@ -783,7 +783,7 @@ span {
         outline: .4rem solid var(--main-color);
         overflow: hidden;
         margin: 0 auto;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         object-fit: cover;
     }
 
@@ -806,7 +806,7 @@ span {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: space-evenly;
     }
 
 
