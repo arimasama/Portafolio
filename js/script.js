@@ -42,19 +42,6 @@ window.onscroll = () => {
 
 };
 
-    /*========== remove menu icon navbar when click navbar link (scroll) ==========*/
-
-
-
-/*========== dark light mode ==========*/
-let lightModeIcon = document.querySelector('#lightMode-icon');
-
-lightModeIcon.onclick = () => {
-    lightModeIcon.classList.toggle('bx-moon');
-    lightModeIcon.classList.toggle('bx-sun');
-    document.body.classList.toggle('light-mode');
-}
-
 /*========== scroll reveal ==========*/
 
 // Animar .home-content solo al cargar la página
@@ -64,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 1500,
         delay: 50,
         once: true // Hace que la animación ocurra solo una vez
-    }).reveal('.home-content', { origin: 'top' });
+    }).reveal('.home-content h1, .home-content p', { origin: 'top' });
 });
 
 let lastScrollTop = 0;
