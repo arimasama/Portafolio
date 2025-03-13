@@ -47,28 +47,36 @@
                 <img src="images/profilePhoto.jpg" alt="">
             </div>
 
-            <h1>Frontend Developer</h1>
+            <h1>Front-end <span>Developer</span></h1>
 
-            <p>Hola, soy Camilo Villegas </p>
-
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/arimadev/"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/arimasama"><i class='bx bxl-github'></i></a>
-            </div>
+            <p>Hola, Soy Camilo Villegas, mis conocimientos principales se centran en JavaScript, HTML, CSS y React para crear interfaces web dinámicas y funcionales, además conocimientosen el manejo bases de datos en MySQL. </p>
             
-            <a href="#" class="btn">Descargar CV</a>
+            <div class="home-sci">
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/arimadev/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/arimasama"><i class='bx bxl-github'></i></a>
+                </div>
+                
+                <a href="#" class="btn">Descargar CV</a>
+            </div>
 
-            <div class="home-img-code">
+        <div class="homeInfo">
+            <p><i class='bx bxl-whatsapp'></i> 3113754577</p>
+            <p><i class='bx bx-envelope'></i> ville2007@hotmail.com </p>
+        </div>
+
+            <!-- <div class="home-img-code">
                 <img src="images/html-5.png" alt="">
                 <img src="images/css-3.png" alt="">
                 <img src="images/js.png" alt="">
                 <img src="images/react.png" alt="">
-            </div>
+            </div> -->
         </div>
 
                 
         <div class="home-img">
-            <img src="images/profilePhoto.jpg" alt="">
+            <div class="imgMarco"></div>
+                <img src="images/profilePhoto.jpg" alt="">
         </div>
 
     </section>
@@ -76,8 +84,8 @@
         <!-- portfolio section design -->
     
         <section class="portfolio" id="portfolio">
-    
-            <h2 class="heading">Mis <span>Proyectos</span></h2>
+            
+            <h2 class="heading"><span><i class='bx bx-code-alt'></i></span> Mis Proyectos</h2>
             <div class="linePortfolio"></div>
     
             <div class="portfolio-container">
@@ -141,27 +149,33 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Contacta<span>me!</span></h2>
+        <div class="linePortfolio"></div>
         
         <div class="contactInfo">
-            <p><i class='bx bxl-whatsapp'></i> 3113754577</p>
-            <p><i class='bx bx-envelope'></i> ville2007@hotmail.com </p>
+
         </div>
 
-        <form name="contact" method="POST" data-netlify="true">
-            
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Nombre">
-                <input type="email" name="email" placeholder="Email" >
+        <div class="formbox">
+            <div>
+                <p><i class='bx bx-map'></i> Medellín, Colombia</p>
+                <p><i class='bx bxl-whatsapp'></i> 3113754577</p>
+                <p><i class='bx bx-envelope'></i> ville2007@hotmail.com </p>
             </div>
-            
-            <div class="input-box">
-                <input type="number" name="phone" placeholder="Numero de Telefono">
-                <input type="text" name="subject" placeholder="Asunto" >
-            </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Deja tu Mensaje..." ></textarea>
-            <input type="submit" value="Enviar Mensaje" class="btn">
-        </form>
-    
+
+            <form name="contact" method="POST" data-netlify="true">     
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="email" name="email" placeholder="Email" >
+                </div>
+                
+                <div class="input-box">
+                    <input type="number" name="phone" placeholder="Numero de Telefono">
+                    <input type="text" name="subject" placeholder="Asunto" >
+                </div>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Deja tu Mensaje..." ></textarea>
+                <input type="submit" value="Enviar Mensaje" class="btn">
+            </form>
+        </div>
     </section>
 
     <!-- footer design -->
@@ -175,6 +189,7 @@
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+    
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>

@@ -8,6 +8,52 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
+//Scroll behavior
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".navbar a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                smoothScroll(targetElement);
+            }
+        });
+    });
+
+    function smoothScroll(target) {
+        const startPosition = window.scrollY;
+        const targetPosition = target.getBoundingClientRect().top + startPosition;
+        const duration = 400; // Duración en ms
+        let startTime = null;
+
+        function easeOutExpo(t) {
+            return t === 1 ? 1 : 1 - Math.pow(2, -4 * t);
+        }
+
+        function animation(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easedProgress = easeOutExpo(progress);
+
+            window.scrollTo(0, startPosition + (targetPosition - startPosition) * easedProgress);
+
+            if (progress < 1) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        requestAnimationFrame(animation);
+    }
+});
+
+
+
+
 
 /*========== scroll sections active link ==========*/
 let sections = document.querySelectorAll('section');
@@ -48,10 +94,10 @@ window.onscroll = () => {
 document.addEventListener("DOMContentLoaded", function () {
     ScrollReveal({
         distance: "70px",
-        duration: 1500,
-        delay: 50,
+        duration: 1800,
+        delay: 60,
         once: true // Hace que la animación ocurra solo una vez
-    }).reveal('.home-content h1, .home-content p', { origin: 'top' });
+    }).reveal('.home-content h1, .home-content p:nth-child(3), .imgMarco', { origin: 'top' }), ScrollReveal().reveal('.home-img img', { origin: 'right' });
 });
 
 let lastScrollTop = 0;
