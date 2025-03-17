@@ -4,8 +4,8 @@ let navbar = document.querySelector('.navbar');
 
 // menu icon navbar
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
+    menuIcon.classList.toggle('bx-x');
 };
 
 //Scroll behavior
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let startTime = null;
 
         function easeOutExpo(t) {
-            return t === 1 ? 1 : 1 - Math.pow(2, -4 * t);
+            return t === 1 ? 1 : 1 - Math.pow(2, -9 * t);
         }
 
         function animation(currentTime) {
@@ -84,7 +84,7 @@ window.onscroll = () => {
 
     // remove toggle icon and navbar when click navbar link (scroll)
     menuIcon.classList.remove('bx-x');
-    // navbar.classList.remove('active');
+    navbar.classList.remove('active');
 
 };
 
