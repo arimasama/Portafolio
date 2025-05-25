@@ -1,126 +1,107 @@
-/*========== menu icon navbar ==========*/
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// Configuración inicial
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('.navbar');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('header nav a');
 
-// menu icon navbar
-menuIcon.onclick = () => {
-    navbar.classList.toggle('active');
-    menuIcon.classList.toggle('bx-x');
-};
+    // Menú móvil toggle
+    const toggleMobileMenu = () => {
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('bx-x');
+    };
 
-//Scroll behavior
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".navbar a");
+    menuIcon.addEventListener('click', toggleMobileMenu);
 
-    links.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                smoothScroll(targetElement);
-            }
-        });
-    });
-
-    function smoothScroll(target) {
+    // Desplazamiento suave
+    const smoothScroll = (target, duration = 400) => {
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
         const startPosition = window.scrollY;
-        const targetPosition = target.getBoundingClientRect().top + startPosition;
-        const duration = 400; // Duración en ms
+        const distance = targetPosition - startPosition;
         let startTime = null;
 
-        function easeOutExpo(t) {
-            return t === 1 ? 1 : 1 - Math.pow(2, -9 * t);
-        }
+        const easeOutExpo = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 
-        function animation(currentTime) {
+        const animation = (currentTime) => {
             if (!startTime) startTime = currentTime;
-            const elapsedTime = currentTime - startTime;
-            const progress = Math.min(elapsedTime / duration, 1);
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
             const easedProgress = easeOutExpo(progress);
 
-            window.scrollTo(0, startPosition + (targetPosition - startPosition) * easedProgress);
+            window.scrollTo(0, startPosition + distance * easedProgress);
 
             if (progress < 1) {
                 requestAnimationFrame(animation);
             }
-        }
+        };
+        
 
         requestAnimationFrame(animation);
-    }
-});
+    };
 
+    // Navegación por secciones
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
 
-
-
-
-/*========== scroll sections active link ==========*/
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-
-window.onscroll = () => {
-
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
+            if (targetSection) {
+                smoothScroll(targetSection);
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            }
+        });
     });
 
+    // Sticky navbar y activación de secciones
+    const handleScroll = () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 100);
 
-// sticky navbar //
-    let header = document.querySelector('header');
+        let currentSection = '';
+        sections.forEach(section => {
+            const top = window.scrollY;
+            const offset = section.offsetTop - 150;
+            const height = section.offsetHeight;
+            const id = section.getAttribute('id');
 
-    header.classList.toggle('sticky', window.scrollY > 100);
-
-    // remove toggle icon and navbar when click navbar link (scroll)
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-
-};
-
-/*========== scroll reveal ==========*/
-
-// Animar .home-content solo al cargar la página
-document.addEventListener("DOMContentLoaded", function () {
-    ScrollReveal({
-        distance: "70px",
-        duration: 1800,
-        delay: 60,
-        once: true // Hace que la animación ocurra solo una vez
-    }).reveal('.home-content h1, .home-content p:nth-child(3), .imgMarco', { origin: 'top' }), ScrollReveal().reveal('.home-img img', { origin: 'right' });
-});
-
-let lastScrollTop = 0;
-
-window.addEventListener("scroll", function onScroll() {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        // Solo activa ScrollReveal si el usuario baja
-        ScrollReveal({
-            distance: "70px",
-            duration: 1500,
-            delay: 50,
-            once: true // Hace que la animación ocurra solo una vez
+            if (top >= offset && top < offset + height) {
+                currentSection = id;
+            }
         });
 
-        ScrollReveal().reveal('.heading, .about-content h3, .about-content p', { origin: 'top' });
-        ScrollReveal().reveal('.services-container, .portfolio-box, .contact form', { origin: 'bottom' });
-        ScrollReveal().reveal('.about-img img', { origin: 'left' });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentSection) {
+                link.classList.add('active');
+            }
+        });
 
-        // Removemos el event listener después de activar ScrollReveal para evitar ejecuciones innecesarias
-        window.removeEventListener("scroll", onScroll);
+        // Limpiar menú móvil
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Animaciones con ScrollReveal
+    const initScrollReveal = () => {
+        ScrollReveal({
+            distance: '70px',
+            duration: 1800,
+            delay: 60,
+            once: true
+        });
+
+        ScrollReveal().reveal('.home-content h1, .home-content p, .home-sci', { origin: 'top' });
+        ScrollReveal().reveal('.home-img img', { origin: 'right' });
+        ScrollReveal().reveal('.about-content, .portfolio-box, .contact form', { origin: 'bottom' });
+        ScrollReveal().reveal('.about-img img, ', { origin: 'left' });
+    };
+
+    // Inicializar ScrollReveal
+    if (window.ScrollReveal) {
+        initScrollReveal();
     }
-
-    lastScrollTop = scrollTop;
 });

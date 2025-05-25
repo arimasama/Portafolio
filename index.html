@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arimaDev portfolio Website Design | Codehal</title>
+    <meta name="description" content="Portafolio de Camilo Villegas - Desarrollador Frontend">
+    <title>Camilo Villegas - Desarrollador Frontend</title>
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Preload de recursos -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
 
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- custom css -->
+    <!-- Iconos y estilos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-    <!-- header design -->
-
     <header class="header">
         <a href="#" class="logo">arimaDev<span>.</span></a>
 
@@ -30,176 +25,147 @@
             <a href="#about">Más sobre mi</a>
             <a href="#contact">Contacto</a>
         </nav>
-
         
-        <div class="bx bx-menu" id="menu-icon">
-
-        </div>
+        <div class="bx bx-menu" id="menu-icon" aria-label="Menú de navegación"></div>
     </header>
 
-    <!-- home section design -->
-    
-    <section class="home" id="home">
-    
-        <div class="home-content">
-            
-            <div class="imgProfile">
-                <img src="images/profilePhoto.jpg" alt="">
-            </div>
-
-            <h1>Hola, Soy  </h1>
-            <h1><span>Camilo Villegas</span></h1>
-
-            <p>Soy frontend developer con conocimientos principales en JavaScript, HTML, CSS y React para crear interfaces web dinámicas y funcionales, además conocimientosen el manejo bases de datos en MySQL. </p>
-            
-            <div class="home-sci">
-                <div class="social-media">
-                    <a href="https://www.linkedin.com/in/arimadev/"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/arimasama"><i class='bx bxl-github'></i></a>
+    <main>
+        <section class="home" id="home">
+            <div class="home-content">
+                <div class="imgProfile">
+                    <img src="images/profilePhoto.jpg" alt="Foto de perfil de Camilo Villegas" loading="lazy">
                 </div>
+
+                <h1>Hola, Soy</h1>
+                <h1><span>Camilo Villegas</span></h1>
+
+                <p>Desarrollador frontend con conocimientos en JavaScript, HTML, CSS, React y MySQL, especializado en crear interfaces web dinámicas y funcionales.</p>
                 
-                <a href="#" class="btn">Descargar CV</a>
+                <div class="home-sci">
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/arimadev/" aria-label="Perfil de LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/arimasama" aria-label="Perfil de GitHub">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                    
+                    <a href="#" class="btn" download>Descargar CV</a>
+                </div>
+
+                <div class="homeInfo">
+                    <p><i class='bx bx-phone'></i> 3113754577</p>
+                    <p><i class='bx bx-envelope'></i> ville2007@hotmail.com</p>
+                </div>
             </div>
-
-        <div class="homeInfo">
-            <p><i class='bx bx-phone'></i> 3113754577</p>
-            <p><i class='bx bx-envelope'></i> ville2007@hotmail.com </p>
-        </div>
-
-            <!-- <div class="home-img-code">
-                <img src="images/html-5.png" alt="">
-                <img src="images/css-3.png" alt="">
-                <img src="images/js.png" alt="">
-                <img src="images/react.png" alt="">
-            </div> -->
-        </div>
-
-                
-        <div class="home-img">
-            <div class="imgMarco"></div>
-                <img src="images/profilePhoto.jpg" alt="">
-        </div>
-
-    </section>
-        
-        <!-- portfolio section design -->
-    
-        <section class="portfolio" id="portfolio">
+                    
+            <div class="home-img">
+                <div class="imgMarco"></div>
+                <img src="images/profilePhoto.jpg" alt="Foto de perfil de Camilo Villegas" loading="lazy">
+            </div>
+        </section>
             
+        <section class="portfolio" id="portfolio">
             <h2 class="heading"><span><i class='bx bx-code-alt'></i></span> Mis Proyectos</h2>
             <div class="linePortfolio"></div>
     
             <div class="portfolio-container">
-    
                 <div class="portfolio-box">
-                    <img src="images/appClima.png" alt="">
+                    <img src="images/appClima.png" alt="Proyecto App Clima" loading="lazy">
                     <div class="portfolio-layer">
                         <h4>Clima App</h4>
                         <p>App del clima con HTML, CSS y JS.</p>
-                        <a href="https://arimaweather.netlify.app/"><i class='bx bx-link-external'></i></a>
+                        <a href="https://arimaweather.netlify.app/" aria-label="Ver proyecto Clima App">
+                            <i class='bx bx-link-external'></i>
+                        </a>
                     </div>
                 </div>
     
                 <div class="portfolio-box">
-                    <img src="images/todoApp_image.png" alt="">
+                    <img src="images/todoApp_image.png" alt="Proyecto TODO List" loading="lazy">
                     <div class="portfolio-layer">
                         <h4>TODO List</h4>
-                        <p>un Tasklist imitando el estilo TODO de notion con drag en drop.</p>
-                        <a href="https://todoappdrop.netlify.app/"><i class='bx bx-link-external'></i></a>
+                        <p>Tasklist con estilo Notion y drag and drop.</p>
+                        <a href="https://todoappdrop.netlify.app/" aria-label="Ver proyecto TODO List">
+                            <i class='bx bx-link-external'></i>
+                        </a>
                     </div>
                 </div>
     
                 <div class="portfolio-box">
-                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="Diseño de interfaz" loading="lazy">
                     <div class="portfolio-layer">
-                        <h4>Proyecto 3</h4>
-                        <p>Diseño de interfaces de usuario con tecnologías como Figma.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+                        <h4>Diseño UI</h4>
+                        <p>Diseño de interfaces con Figma.</p>
+                        <a href="#" aria-label="Ver proyecto de diseño">
+                            <i class='bx bx-link-external'></i>
+                        </a>
                     </div>
                 </div>
-    
             </div>
-    
         </section>
 
-    <!-- about section design -->
+        <section class="about" id="about">
+            <h2 class="heading">Sobre <span>mi</span></h2>
+            <div class="linePortfolio"></div>
 
-    <section class="about" id="about">
-        <h2 class="heading">Sobre <span>mi</span></h2>
-        <div class="linePortfolio"></div>
-
-        <div class="about-box">
-            <div class="about-img">
-                <img src="images/about_me.png" alt="">
-            </div>
-            
-            <div class="about-content">
-                <h3>¡Hola, estoy aqui para ayudarte con tu proyecto!</h3>
-                <p>Soy Camilo Villegas, Graduado recientemente en CESDE como técnico en desarrollo de software. Mis conocimientos principales se centran en JavaScript, HTML, CSS y React para crear interfaces web dinámicas y funcionales, desarrollo aplicaciones móviles con Flutter y también además manejo bases de datos en MySQL.
-                </p>
-                
-                <p>Soy una persona apasionada por la tecnología, siempre en busca de nuevos retos para mejorar mis habilidades. Me encanta trabajar en equipo y encontrar soluciones creativas a problemas reales. Estoy listo para contribuir y seguir aprendiendo en un entorno profesional.</p>
-                
-                <p>Si tienes alguna pregunta o colaboración, no dudes en contactarme.</p>
-            </div>
-        </div>
-            
-    </section>
-
-    <!-- contact section design -->
-
-    <section class="contact" id="contact">
-        <h2 class="heading">Contacta<span>me!</span></h2>
-        <div class="linePortfolio"></div>
-        
-        <div class="contactInfo">
-
-        </div>
-
-        <div class="formbox">
-            <div>
-                <p><i class='bx bx-map'></i> Medellín, Colombia</p>
-                <p><i class='bx bx-phone'></i> 3113754577</p>
-                <p><i class='bx bx-envelope'></i> ville2007@hotmail.com </p>
-            </div>
-
-            <form name="contact" method="POST" data-netlify="true">     
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Nombre">
-                    <input type="email" name="email" placeholder="Email" >
+            <div class="about-box">
+                <div class="about-img">
+                    <img src="images/about_me.png" alt="Sobre mí" loading="lazy">
                 </div>
                 
-                <div class="input-box">
-                    <input type="number" name="phone" placeholder="Numero de Telefono">
-                    <input type="text" name="subject" placeholder="Asunto" >
+                <div class="about-content">
+                    <h3>¡Hola, estoy aquí para ayudarte con tu proyecto!</h3>
+                    <p>Graduado en CESDE como técnico en desarrollo de software. Mis conocimientos principales se centran en JavaScript, HTML, CSS y React para crear interfaces web dinámicas y funcionales, desarrollo de aplicaciones móviles con Flutter y manejo de bases de datos MySQL.</p>
+                    
+                    <p>Soy una persona apasionada por la tecnología, siempre en busca de nuevos retos para mejorar mis habilidades. Me encanta trabajar en equipo y encontrar soluciones creativas a problemas reales.</p>
+                    
+                    <p>Si tienes alguna pregunta o colaboración, no dudes en contactarme.</p>
                 </div>
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Deja tu Mensaje..." ></textarea>
-                <input type="submit" value="Enviar Mensaje" class="btn">
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- footer design -->
+        <section class="contact" id="contact">
+            <h2 class="heading">Contacta<span>me!</span></h2>
+            <div class="linePortfolio"></div>
+
+            <div class="formbox">
+                <div>
+                    <p><i class='bx bx-map'></i> Medellín, Colombia</p>
+                    <p><i class='bx bx-phone'></i> 3113754577</p>
+                    <p><i class='bx bx-envelope'></i> ville2007@hotmail.com</p>
+                </div>
+
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="tel" name="phone" placeholder="Número de Teléfono">
+                        <input type="text" name="subject" placeholder="Asunto" required>
+                    </div>
+                    <textarea name="message" cols="30" rows="10" placeholder="Deja tu Mensaje..." required></textarea>
+                    <input type="submit" value="Enviar Mensaje" class="btn">
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2023 by arimaDev | All Rights Reserved.</p>
+            <p>Copyright &copy; 2024 arimaDev | Todos los derechos reservados.</p>
         </div>
 
         <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#home" aria-label="Volver al inicio"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
-    
 
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- custom js -->
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
-
 </html>
